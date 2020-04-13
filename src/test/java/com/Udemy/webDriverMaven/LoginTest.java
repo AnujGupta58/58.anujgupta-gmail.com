@@ -9,13 +9,16 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class LoginTest {
 	
 	public WebDriver driver;
 
 	@BeforeSuite
 	public void setUp() {
-		System.setProperty("webdriver.chrome.driver", "F:\\\\software\\\\jar_files\\\\chromedriver_win32\\\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "F:\\\\software\\\\jar_files\\\\chromedriver_win32\\\\chromedriver.exe");
+		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.get("http://google.com");
 		driver.manage().window().maximize();
