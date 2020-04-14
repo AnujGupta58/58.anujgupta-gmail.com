@@ -13,12 +13,12 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LoginTest {
 	
-	public WebDriver driver;
+	public WebDriver driver = null;
 
 	@BeforeSuite
 	public void setUp() {
-		//System.setProperty("webdriver.chrome.driver", "F:\\\\software\\\\jar_files\\\\chromedriver_win32\\\\chromedriver.exe");
-		WebDriverManager.chromedriver().setup();
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Anuj Gupta\\JavaProjects\\webDriverMaven\\src\\test\\java\\com\\Udemy\\executables\\chromedriver.exe");
+		//WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.get("http://google.com");
 		driver.manage().window().maximize();
