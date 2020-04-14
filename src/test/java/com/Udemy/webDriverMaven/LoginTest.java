@@ -17,7 +17,7 @@ public class LoginTest {
 
 	@BeforeSuite
 	public void setUp() {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Anuj Gupta\\JavaProjects\\webDriverMaven\\src\\test\\java\\com\\Udemy\\executables\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\test\\java\\com\\Udemy\\executables\\chromedriver.exe");
 		//WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.get("http://google.com");
