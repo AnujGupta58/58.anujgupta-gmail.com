@@ -30,6 +30,7 @@ public class LoginTest {
 		//driver.get("http://google.com/");
 		driver.findElement(By.name("q")).sendKeys("Testing");
 		driver.findElement(By.className("gNO89b")).click();
+		System.out.println("clicked");
 	}
 	
 	@AfterSuite
